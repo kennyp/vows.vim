@@ -8,16 +8,16 @@ else
   runtime! syntax/javascript.vim
 endif
 
-syntax region vowsContextD    start=+^\s\+"+ skip=+\\\\\|\\"+ end=+":\|" :+
+syntax region vowsContextD    start=+^\s\+"+ skip=+\\\\\|\\"+ end=+":\|" :+ oneline
 highlight link vowsContextD Constant
 
-syntax region vowsContextS  start=+^\s\+'+ skip=+\\\\\|\\'+ end=+':\|' :+
+syntax region vowsContextS  start=+^\s\+'+ skip=+\\\\\|\\'+ end=+':\|' :+ oneline
 highlight link vowsContextS Constant
 
-syntax region vowsPendingS   start=+'pending+ skip=+\\\\\|\\'+ end=+'+
+syntax region vowsPendingS   start=+'pending+ skip=+\\\\\|\\'+ end=+'+ oneline
 highlight link vowsPendingS Keyword
 
-syntax region vowsPendingD   start=+"pending+ skip=+\\\\\|\\"+ end=+"+
+syntax region vowsPendingD   start=+"pending+ skip=+\\\\\|\\"+ end=+"+ oneline
 highlight link vowsPendingD Keyword
 
 syntax keyword vowsKeywords topic
